@@ -467,54 +467,57 @@ button {
 
 
 /** about section **/
-
+/* Contenedor principal */
 .about {
-     background-color: #fff;
-     padding-top: 95px;
+    background-color: #fff;
+    padding-top: 95px;
+    display: flex; /* Alinea elementos en fila */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Separa texto e imagen */
+    gap: 15px; /* Añadido para reducir el espacio entre la imagen y el texto */
 }
 
-.about .titlepage {
-     text-align: left;
-     margin-top: 41%;
-     padding-bottom: 0;
-     margin-right: -20px;
+/* Texto alineado a la izquierda */
+.about_text {
+    flex: 1; /* Ocupa el espacio disponible a la izquierda */
+    text-align: justify; /* Justifica el texto */
+    padding-right: 10px; /* Reduce el espacio entre el texto y la imagen */
+    line-height: 1.6; /* Ajusta la altura de línea para un mejor espaciado */
 }
 
-.about .titlepage h2 {
-     margin-bottom: 35px;
+.about_text h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-.about .titlepage p {
-     font-weight: 300;
-     color: #2e2d2d;
-     font-size: 17px;
-     line-height: 31px;
-     padding-bottom: 35px;
+.about_text p {
+    font-weight: 300;
+    color: #2e2d2d;
+    font-size: 17px;
+    line-height: 1.8; /* Ajuste para una mejor legibilidad */
+    word-spacing: 0.5px; /* Un pequeño ajuste para que las palabras se vean más naturales */
 }
 
+/* Imagen alineada a la derecha */
 .about_img {
-     padding: 40px 30px 45px 30px;
+    flex: 1; /* Ocupa el espacio disponible a la derecha */
+    display: block; /* Asegura que la imagen ocupe el espacio disponible */
+margin-top: 90px
 }
 
-.about_img::before {
-     position: absolute;
-     content: "";
-     background: url(../images/vg.png);
-     top: 0;
-     height: 100%;
-     width: 452px;
-     right: 0;
-     border-radius: 5px;
-}
 
 .about_img figure {
-     margin: 0;
+    margin: 0;
 }
 
 .about_img figure img {
-     width: 100%;
-     z-index: 9999;
-     position: relative;
+    width: 120%; /* Ajusta el tamaño de la imagen */
+    max-width: 450px; /* Controla el tamaño máximo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
 }
 
 
@@ -593,11 +596,12 @@ button {
 
 .gallery_text {
      text-align: center;
-     background-color: #2a2b2a;
+     background-color: #7ed957;
      height: 369px;
      display: flex;
      align-items: center;
      justify-content: center;
+     
 }
 
 .galleryh3 h3 {
@@ -826,6 +830,7 @@ button {
      padding: 0 30px 40px 30px;
      border: #16d316 solid 1px;
      border-radius: 5px;
+
 }
 
 .text_humai span {
@@ -836,10 +841,18 @@ button {
      line-height: 31px;
      font-weight: bold;
      display: block;
+
 }
 
 .text_humai i img {
      margin-top: -60px;
+     height: auto;
+     border-radius: 80px;
+     border: 0;
+     display: inline-block;
+     height: 120px;
+     width: auto;
+     margin-left: 50%;
 }
 
 .text_humai p {
